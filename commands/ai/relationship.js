@@ -64,8 +64,8 @@ module.exports = {
           await interaction.reply('Shruti has no defined relationships with anyone yet.');
           return;
         }
-        let response = 'Shruti's Relationships:
-';
+        let response = `Shruti's Relationships:
+`;
         for (const [memberId, type] of relationships) {
           const user = await interaction.client.users.fetch(memberId);
           response += `\n**${user.username}:** ${type}\n`;
