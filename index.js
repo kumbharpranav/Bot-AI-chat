@@ -2,6 +2,18 @@ require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const express = require('express');
+
+const app = express();
+const port = process.env.PORT || 3000; // Use Render's port or default to 3000
+
+app.get('/', (req, res) => {
+  res.send('Discord bot is running!');
+});
+
+app.listen(port, () => {
+  console.log(`Web server listening on port ${port}`);
+});
 
 const client = new Client({
   intents: [
