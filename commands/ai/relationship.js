@@ -10,7 +10,7 @@ module.exports = {
     .addSubcommand(subcommand =>
       subcommand
       .setName('set')
-      .setDescription('Sets Shruti's relationship with a member.')
+      .setDescription("Sets Shruti's relationship with a member.")
       .addUserOption(option =>
         option.setName('member')
         .setDescription('The member to set the relationship with.')
@@ -25,7 +25,7 @@ module.exports = {
     .addSubcommand(subcommand =>
       subcommand
       .setName('view')
-      .setDescription('Views Shruti's relationship with a member or all relationships.')
+      .setDescription("Views Shruti's relationship with a member or all relationships.")
       .addUserOption(option =>
         option.setName('member')
         .setDescription('The member to view the relationship with (leave empty to view all).')
@@ -35,7 +35,7 @@ module.exports = {
     .addSubcommand(subcommand =>
       subcommand
       .setName('clear')
-      .setDescription('Clears Shruti's relationship with a member.')
+      .setDescription("Clears Shruti's relationship with a member.")
       .addUserOption(option =>
         option.setName('member')
         .setDescription('The member to clear the relationship with.')
@@ -64,7 +64,8 @@ module.exports = {
           await interaction.reply('Shruti has no defined relationships with anyone yet.');
           return;
         }
-        let response = 'Shruti's Relationships:\n';
+        let response = 'Shruti's Relationships:
+';
         for (const [memberId, type] of relationships) {
           const user = await interaction.client.users.fetch(memberId);
           response += `\n**${user.username}:** ${type}\n`;
