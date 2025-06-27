@@ -6,7 +6,7 @@ const relationships = new Map();
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('relationship')
-    .setDescription('Manages Shruti's relationships with members.')
+    .setDescription("Manages Shruti's relationships with members.")
     .addSubcommand(subcommand =>
       subcommand
       .setName('set')
